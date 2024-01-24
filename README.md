@@ -11,6 +11,6 @@ To contribute to the project, follow these steps:
 2. Give your forked repository a suitable name.
 3. Make changes and commit them to your fork.
 4. Push the commit to your fork.
-5. Create a PR.
-6. Wait until the PR has been verified and approved.
+5. Create a pull request.
+6. Wait until the pull request has been verified and approved.
 ```
