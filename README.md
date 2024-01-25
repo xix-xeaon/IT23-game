@@ -1,6 +1,9 @@
 # IT23-game
 Vampire Survivor clone by students of NTI Gymnasiet in Malmö
 
+## Requirements
+- [Godot Engine](https://godotengine.org/download/windows/)
+
 ## Contributing
 For effective contribution, consider using [GitHub Desktop](https://desktop.github.com/) as it is highly recommended.
 
