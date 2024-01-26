@@ -2,7 +2,7 @@
 Vampire Survivor clone by students of NTI Gymnasiet in Malmö
 
 ## Requirements
-- [Godot Engine](https://godotengine.org/download/windows/)
+- [Godot Engine](https://godotengine.org/)
 
 ## Contributing
 For effective contribution, consider using [GitHub Desktop](https://desktop.github.com/) as it is highly recommended.
