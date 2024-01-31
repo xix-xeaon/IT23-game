@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctuplp7iua3o2"]
+[gd_scene load_steps=5 format=3 uid="uid://ctuplp7iua3o2"]
 
 [ext_resource type="Script" path="res://Menu/Main/main-menu.gd" id="1_jc1kk"]
+[ext_resource type="AudioStream" uid="uid://kp2rkfyuqc42" path="res://Sounds/Music/MainMenu.ogg" id="2_p5pj4"]
 
 [sub_resource type="Gradient" id="Gradient_i3wht"]
 
@@ -52,5 +53,9 @@ theme_override_font_sizes/font_size = 32
 text = "Start Game"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_p5pj4")
+volume_db = -6.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_pressed"]
