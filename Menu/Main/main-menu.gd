@@ -1,9 +1,14 @@
 extends Control
 
-# Levels do not exist yet
-#@onready var level_scene = preload("res://Menu/Main/main-menu.tscn")
-
 # Start button
+# TODO: Add button click SFX + level scene
 func _on_start_pressed() -> void:
-	#get_tree().change_scene_to_file(level_scene)
-	pass
+	print("Mouse has pressed the Start button")
+
+# TODO: Add hover SFX
+func _on_start_button_mouse_entered() -> void:
+	print("Mouse is hovering over the Start button")
+
+# TODO: Add unhover SFX
+func _on_start_button_mouse_exited() -> void:
+	print("Mouse is no longer hovering over the Start button")
