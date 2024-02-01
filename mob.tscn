@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgx0imdyplvte"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_7pxsg"]
+[ext_resource type="Texture2D" uid="uid://c26qdcq1o6e28" path="res://barnacle.png" id="2_uadwj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lrcnv"]
+radius = 37.4833
+
+[node name="Mob" type="CharacterBody2D"]
+script = ExtResource("1_7pxsg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uadwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lrcnv")
