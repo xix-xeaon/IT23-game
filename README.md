@@ -1,8 +1,8 @@
 # IT23-game
-A **Vampire Survivor clone** by students of NTI Gymnasiet in Malmö
+A Vampire Survivor clone by students of NTI Gymnasiet in Malmö
 
 ## Requirements
-- [Godot Engine 4.2.1](https://godotengine.org/download/)
+- [Godot Engine 4.2.x](https://godotengine.org/download/)
 
 ## Contributing
 For effective contribution, consider using [GitHub Desktop](https://desktop.github.com/) as it is highly recommended.
@@ -13,9 +13,9 @@ For effective contribution, consider using [GitHub Desktop](https://desktop.gith
 3. if GitHub Desktop is installed it will automatically open and a prompt will pop up "Clone a repository", press "Clone" to clone the repository to your device locally.
 
 ### Make changes using Godot Engine
-4. Open **Godot Engine 4.2.1**.
+4. Open **Godot Engine 4.2.x**.
 5. In Godot, click on "Import" then it will ask for a **project.godot** file.
-6. Navigate to the folder where you cloned the repository (Default is located in Documents/GitHub/**Repository Name**).
+6. Navigate to the folder where you cloned the repository (Default is located in Documents/GitHub/***Repository Name***).
 7. "Open" the **project.godot** file then a new window will appear, click on "Import & Edit".
 8. Make changes to the project.
 9. Test your changes and check if it is working as intended.
