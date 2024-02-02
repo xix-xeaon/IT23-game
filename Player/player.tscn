@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwibpj61yuhlv"]
+[gd_scene load_steps=7 format=3 uid="uid://cwibpj61yuhlv"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_62xea"]
 [ext_resource type="Texture2D" uid="uid://cw7qc4s44biy6" path="res://Player/character_robot_walk0.png" id="2_uka3s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_milye"]
-size = Vector2(43, 69.75)
+size = Vector2(43, 48.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1arvl"]
+size = Vector2(43, 47)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfjn7"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_by40r"]
+bg_color = Color(0.894118, 0.447059, 0.407843, 1)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_62xea")
@@ -15,5 +24,26 @@ scale = Vector2(0.96875, 0.992188)
 texture = ExtResource("2_uka3s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(60, 78)
+position = Vector2(60, 88.4375)
 shape = SubResource("RectangleShape2D_milye")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(59.5, 88.5)
+shape = SubResource("RectangleShape2D_1arvl")
+debug_color = Color(0.890196, 0.298039, 0.317647, 0.419608)
+
+[node name="Healthbar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = 11.0
+offset_top = 117.0
+offset_right = 110.0
+offset_bottom = 128.0
+theme_override_styles/background = SubResource("StyleBoxFlat_xfjn7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_by40r")
+value = 100.0
+show_percentage = false
