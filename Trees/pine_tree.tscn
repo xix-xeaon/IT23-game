@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvxioub202qqm"]
 
-[ext_resource type="Texture2D" uid="uid://b7yj4xkkha1xm" path="res://Trees/ground_shadow.png" id="1_3ncjd"]
-[ext_resource type="Texture2D" uid="uid://6olnvg3y2rq" path="res://Trees/foliagePack_005.png" id="1_lqnct"]
+[ext_resource type="Texture2D" uid="uid://b7yj4xkkha1xm" path="res://Trees/ground_shadow.png" id="1_0e7v3"]
+[ext_resource type="Texture2D" uid="uid://6olnvg3y2rq" path="res://Trees/foliagePack_005.png" id="2_5sguo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyxiq"]
 size = Vector2(26, 61)
@@ -10,12 +10,14 @@ size = Vector2(26, 61)
 
 [node name="GroundShadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.141176)
+self_modulate = Color(0.0117647, 0.0117647, 0.0117647, 1)
 position = Vector2(0, 13)
-texture = ExtResource("1_3ncjd")
+texture = ExtResource("1_0e7v3")
 
 [node name="FoliagePack005" type="Sprite2D" parent="."]
+self_modulate = Color(0.635294, 0.635294, 0.635294, 1)
 position = Vector2(0, -70)
-texture = ExtResource("1_lqnct")
+texture = ExtResource("2_5sguo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.5)
