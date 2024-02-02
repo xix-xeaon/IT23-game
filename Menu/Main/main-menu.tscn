@@ -24,7 +24,6 @@ script = ExtResource("1_jc1kk")
 stream = ExtResource("2_p5pj4")
 volume_db = -4.0
 autoplay = true
-bus = &"Music"
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
