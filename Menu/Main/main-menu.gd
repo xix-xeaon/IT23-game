@@ -1,12 +1,9 @@
 extends Control
 
-# Start button
-# TODO: Load into level scene (possibly a level selector if multiple levels exists???)
+# Start Button
 func _on_start_pressed() -> void:
-	pass
-
+	%MenuSelect.play()
 func _on_start_button_mouse_entered() -> void:
-	pass
-
+	%MenuSelect.play()
 func _on_start_button_mouse_exited() -> void:
-	pass
+	%MenuSelect.play()

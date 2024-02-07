@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctuplp7iua3o2"]
+[gd_scene load_steps=6 format=3 uid="uid://ctuplp7iua3o2"]
 
 [ext_resource type="Script" path="res://Menu/Main/main-menu.gd" id="1_jc1kk"]
-[ext_resource type="AudioStream" uid="uid://kp2rkfyuqc42" path="res://Sounds/Music/MainMenu.ogg" id="2_p5pj4"]
+[ext_resource type="AudioStream" uid="uid://cn3hu5nkunvnb" path="res://Sounds/Music/MainMenuMusic.ogg" id="2_ndsvf"]
+[ext_resource type="AudioStream" uid="uid://d3rvslhftnyv2" path="res://Sounds/UI/MenuSelect.ogg" id="3_eupcb"]
 
 [sub_resource type="Gradient" id="Gradient_i3wht"]
+colors = PackedColorArray(0.176471, 0, 0, 1, 1, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_keutq"]
 gradient = SubResource("Gradient_i3wht")
@@ -19,11 +21,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jc1kk")
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_p5pj4")
-volume_db = -4.0
-autoplay = true
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -55,6 +52,27 @@ text = "Vampire Survivor"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CreatedBy" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -124.0
+offset_right = 173.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Created By NTI Malmö"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -70,6 +88,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Start Game"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ndsvf")
+volume_db = -4.0
+autoplay = true
+
+[node name="MenuSelect" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_eupcb")
 
 [connection signal="mouse_entered" from="StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="mouse_exited" from="StartButton" to="." method="_on_start_button_mouse_exited"]
