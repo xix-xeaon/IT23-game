@@ -7,7 +7,7 @@
 size = Vector2(43, 48.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1arvl"]
-size = Vector2(43, 47)
+size = Vector2(73, 67)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfjn7"]
 bg_color = Color(0.345098, 0.345098, 0.345098, 1)
@@ -33,7 +33,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(59.5, 88.5)
+position = Vector2(56.5, 89.5)
 shape = SubResource("RectangleShape2D_1arvl")
 debug_color = Color(0.890196, 0.298039, 0.317647, 0.419608)
 
