@@ -7,7 +7,7 @@ size = Vector2(50, 75)
 
 [node name="Ghost" type="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="GhostBild" type="Sprite2D" parent="."]
 texture = ExtResource("1_18y5g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
