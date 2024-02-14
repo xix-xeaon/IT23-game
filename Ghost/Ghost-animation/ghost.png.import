@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dppegwfesdum8"
-path="res://.godot/imported/ghost_dead.png-8f8b2ca682befcba7a81f39169a7d816.ctex"
+uid="uid://cvnbyywnm0fle"
+path="res://.godot/imported/ghost.png-733b75063a2c6b0c13351ffd461819db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost/ghost_dead.png"
-dest_files=["res://.godot/imported/ghost_dead.png-8f8b2ca682befcba7a81f39169a7d816.ctex"]
+source_file="res://Ghost/Ghost-animation/ghost.png"
+dest_files=["res://.godot/imported/ghost.png-733b75063a2c6b0c13351ffd461819db.ctex"]
 
 [params]
 

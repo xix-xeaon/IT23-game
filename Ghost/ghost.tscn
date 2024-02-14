@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt73c2vl354v4"]
+[gd_scene load_steps=4 format=3 uid="uid://bt73c2vl354v4"]
 
-[ext_resource type="Texture2D" uid="uid://cxahbekv54qck" path="res://Ghost/ghost_normal.png" id="1_18y5g"]
+[ext_resource type="Texture2D" path="res://Ghost/ghost_normal.png" id="1_18y5g"]
+[ext_resource type="Script" path="res://Ghost/ghost.gd" id="1_mjj3b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv4ub"]
 size = Vector2(50, 75)
 
 [node name="Ghost" type="CharacterBody2D"]
+script = ExtResource("1_mjj3b")
 
 [node name="GhostBild" type="Sprite2D" parent="."]
 texture = ExtResource("1_18y5g")
