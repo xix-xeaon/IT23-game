@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqg215kxucssq"]
+[gd_scene load_steps=3 format=3 uid="uid://dqg215kxucssq"]
 
 [ext_resource type="Texture2D" uid="uid://ckruw1lws6bd6" path="res://background/stones_brick_textures/Brick_Texture.png" id="1_bx5j4"]
 [ext_resource type="Texture2D" uid="uid://gl0lpsh6opsu" path="res://background/stones_brick_textures/Stonewall_Texture.png" id="2_rv84g"]
-[ext_resource type="PackedScene" uid="uid://cwibpj61yuhlv" path="res://Player/player.tscn" id="3_8agw3"]
-[ext_resource type="PackedScene" uid="uid://cvxioub202qqm" path="res://Trees/pine_tree.tscn" id="3_ba5gn"]
 
 [node name="Background" type="ParallaxBackground"]
 scroll_offset = Vector2(3.92192, -13.6444)
@@ -13,7 +11,6 @@ texture_filter = 1
 motion_mirroring = Vector2(3072, 3072)
 
 [node name="BrickTexture" type="Sprite2D" parent="grass"]
-position = Vector2(-3, 0)
 scale = Vector2(3, 3)
 texture = ExtResource("1_bx5j4")
 centered = false
@@ -527,9 +524,3 @@ texture = ExtResource("2_rv84g")
 position = Vector2(61.0001, 126)
 scale = Vector2(0.119629, 0.0822754)
 texture = ExtResource("2_rv84g")
-
-[node name="PineTree" parent="." instance=ExtResource("3_ba5gn")]
-position = Vector2(608, 472)
-
-[node name="Player" parent="." instance=ExtResource("3_8agw3")]
-position = Vector2(280, 353)
