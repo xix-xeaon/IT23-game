@@ -1,0 +1,526 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqg215kxucssq"]
+
+[ext_resource type="Texture2D" uid="uid://ckruw1lws6bd6" path="res://background/stones_brick_textures/Brick_Texture.png" id="1_bx5j4"]
+[ext_resource type="Texture2D" uid="uid://gl0lpsh6opsu" path="res://background/stones_brick_textures/Stonewall_Texture.png" id="2_rv84g"]
+
+[node name="Background" type="ParallaxBackground"]
+scroll_offset = Vector2(3.92192, -13.6444)
+
+[node name="grass" type="ParallaxLayer" parent="."]
+texture_filter = 1
+motion_mirroring = Vector2(3072, 3072)
+
+[node name="BrickTexture" type="Sprite2D" parent="grass"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_bx5j4")
+centered = false
+
+[node name="StonewallTexture" type="Sprite2D" parent="grass"]
+position = Vector2(61, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture2" type="Sprite2D" parent="grass"]
+position = Vector2(183, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture3" type="Sprite2D" parent="grass"]
+position = Vector2(305, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture4" type="Sprite2D" parent="grass"]
+position = Vector2(427, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture5" type="Sprite2D" parent="grass"]
+position = Vector2(549, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture6" type="Sprite2D" parent="grass"]
+position = Vector2(671, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture7" type="Sprite2D" parent="grass"]
+position = Vector2(793, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture8" type="Sprite2D" parent="grass"]
+position = Vector2(915, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture9" type="Sprite2D" parent="grass"]
+position = Vector2(1037, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture10" type="Sprite2D" parent="grass"]
+position = Vector2(1159, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture33" type="Sprite2D" parent="grass"]
+position = Vector2(1281, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture41" type="Sprite2D" parent="grass"]
+position = Vector2(1403, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture42" type="Sprite2D" parent="grass"]
+position = Vector2(1525, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture43" type="Sprite2D" parent="grass"]
+position = Vector2(1647, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture44" type="Sprite2D" parent="grass"]
+position = Vector2(1769, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture50" type="Sprite2D" parent="grass"]
+position = Vector2(2501, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture51" type="Sprite2D" parent="grass"]
+position = Vector2(2623, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture52" type="Sprite2D" parent="grass"]
+position = Vector2(2745, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture53" type="Sprite2D" parent="grass"]
+position = Vector2(2867, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture54" type="Sprite2D" parent="grass"]
+position = Vector2(2989, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture55" type="Sprite2D" parent="grass"]
+position = Vector2(3011, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture45" type="Sprite2D" parent="grass"]
+position = Vector2(1891, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture46" type="Sprite2D" parent="grass"]
+position = Vector2(2013, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture47" type="Sprite2D" parent="grass"]
+position = Vector2(2135, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture48" type="Sprite2D" parent="grass"]
+position = Vector2(2257, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture49" type="Sprite2D" parent="grass"]
+position = Vector2(2379, 42)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture78" type="Sprite2D" parent="grass"]
+position = Vector2(63.625, 1891)
+scale = Vector2(0.124268, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture79" type="Sprite2D" parent="grass"]
+position = Vector2(188, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture80" type="Sprite2D" parent="grass"]
+position = Vector2(310, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture81" type="Sprite2D" parent="grass"]
+position = Vector2(432, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture82" type="Sprite2D" parent="grass"]
+position = Vector2(549, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture84" type="Sprite2D" parent="grass"]
+position = Vector2(731, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture85" type="Sprite2D" parent="grass"]
+position = Vector2(853, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture86" type="Sprite2D" parent="grass"]
+position = Vector2(975, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture87" type="Sprite2D" parent="grass"]
+position = Vector2(1097, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture88" type="Sprite2D" parent="grass"]
+position = Vector2(1219, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture89" type="Sprite2D" parent="grass"]
+position = Vector2(1341, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture90" type="Sprite2D" parent="grass"]
+position = Vector2(1463, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture91" type="Sprite2D" parent="grass"]
+position = Vector2(1585, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture92" type="Sprite2D" parent="grass"]
+position = Vector2(1707, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture93" type="Sprite2D" parent="grass"]
+position = Vector2(2439, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture94" type="Sprite2D" parent="grass"]
+position = Vector2(2561, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture95" type="Sprite2D" parent="grass"]
+position = Vector2(2683, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture96" type="Sprite2D" parent="grass"]
+position = Vector2(2805, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture97" type="Sprite2D" parent="grass"]
+position = Vector2(2927.37, 1891)
+scale = Vector2(0.120362, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture98" type="Sprite2D" parent="grass"]
+position = Vector2(3050, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture99" type="Sprite2D" parent="grass"]
+position = Vector2(1829, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture100" type="Sprite2D" parent="grass"]
+position = Vector2(1951, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture101" type="Sprite2D" parent="grass"]
+position = Vector2(2073, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture102" type="Sprite2D" parent="grass"]
+position = Vector2(2195, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture103" type="Sprite2D" parent="grass"]
+position = Vector2(2317, 1891)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture11" type="Sprite2D" parent="grass"]
+position = Vector2(1159, 126)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture12" type="Sprite2D" parent="grass"]
+position = Vector2(1159, 210)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture13" type="Sprite2D" parent="grass"]
+position = Vector2(1159, 294)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture14" type="Sprite2D" parent="grass"]
+position = Vector2(1159, 378)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture15" type="Sprite2D" parent="grass"]
+position = Vector2(1159, 462)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture16" type="Sprite2D" parent="grass"]
+position = Vector2(1159, 546)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture17" type="Sprite2D" parent="grass"]
+position = Vector2(1159, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture34" type="Sprite2D" parent="grass"]
+position = Vector2(609, 683)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture35" type="Sprite2D" parent="grass"]
+position = Vector2(609, 767)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture36" type="Sprite2D" parent="grass"]
+position = Vector2(609, 851)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture37" type="Sprite2D" parent="grass"]
+position = Vector2(609, 935)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture38" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1019)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture39" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1103)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture40" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1187)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture56" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1271)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture57" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1355)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture58" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1439)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture59" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1523)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture60" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1607)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture61" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1691)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture62" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1775)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture63" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1859)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture64" type="Sprite2D" parent="grass"]
+position = Vector2(609, 1943)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture65" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2027)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture66" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2111)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture67" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2195)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture68" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2279)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture69" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2363)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture70" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2447)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture71" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2531)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture72" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2615)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture73" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2699)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture74" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2783)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture75" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2867)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture76" type="Sprite2D" parent="grass"]
+position = Vector2(609, 2951)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture77" type="Sprite2D" parent="grass"]
+position = Vector2(609, 3032.44)
+scale = Vector2(0.119629, 0.0772703)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture18" type="Sprite2D" parent="grass"]
+position = Vector2(1037, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture19" type="Sprite2D" parent="grass"]
+position = Vector2(915, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture20" type="Sprite2D" parent="grass"]
+position = Vector2(793, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture21" type="Sprite2D" parent="grass"]
+position = Vector2(671, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture22" type="Sprite2D" parent="grass"]
+position = Vector2(549, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture23" type="Sprite2D" parent="grass"]
+position = Vector2(427, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture24" type="Sprite2D" parent="grass"]
+position = Vector2(305, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture25" type="Sprite2D" parent="grass"]
+position = Vector2(183, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture26" type="Sprite2D" parent="grass"]
+position = Vector2(61.0001, 630)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture27" type="Sprite2D" parent="grass"]
+position = Vector2(61.0001, 546)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture28" type="Sprite2D" parent="grass"]
+position = Vector2(61.0001, 462)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture29" type="Sprite2D" parent="grass"]
+position = Vector2(61.0001, 378)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture30" type="Sprite2D" parent="grass"]
+position = Vector2(61.0001, 294)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture31" type="Sprite2D" parent="grass"]
+position = Vector2(61.0001, 210)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
+
+[node name="StonewallTexture32" type="Sprite2D" parent="grass"]
+position = Vector2(61.0001, 126)
+scale = Vector2(0.119629, 0.0822754)
+texture = ExtResource("2_rv84g")
