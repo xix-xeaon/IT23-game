@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqmm7g8iokudr"]
+
+[ext_resource type="Script" path="res://Mob/mob.gd" id="1_35va2"]
+[ext_resource type="Texture2D" uid="uid://bs1oudwx7fsav" path="res://Mob/barnacle.png" id="2_ql1rq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wpfrm"]
+
+[node name="Mob" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_35va2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ql1rq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wpfrm")
