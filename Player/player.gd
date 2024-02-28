@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-const game_over_scene :PackedScene = preload("res://GameOver/GameOver.tscn")
-var game_over_instance = game_over_scene.instantiate()
-
 signal health_depleted
 
 const DAMAGE_RATE = 5.0
@@ -23,6 +20,3 @@ func _physics_process(delta):
 		%Healthbar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
-
-func _on_health_depleted() -> void:
-	add_child(game_over_instance) # Add to Player scene
