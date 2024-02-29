@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_62xea"]
 [ext_resource type="Texture2D" uid="uid://cw7qc4s44biy6" path="res://Player/character_robot_walk0.png" id="2_uka3s"]
-[ext_resource type="PackedScene" uid="uid://c3o6lnqfl6rwp" path="res://Weapon/raygun.tscn" id="3_5gnmh"]
+[ext_resource type="PackedScene" uid="uid://c3o6lnqfl6rwp" path="res://Weapon/raygun.tscn" id="3_1dj6x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_milye"]
 size = Vector2(43, 69.75)
@@ -19,5 +19,5 @@ texture = ExtResource("2_uka3s")
 position = Vector2(60, 78)
 shape = SubResource("RectangleShape2D_milye")
 
-[node name="Raygun" parent="." instance=ExtResource("3_5gnmh")]
+[node name="Raygun" parent="." instance=ExtResource("3_1dj6x")]
 position = Vector2(64, 76)
