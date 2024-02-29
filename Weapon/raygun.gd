@@ -10,7 +10,7 @@ func _physics_process(delta):
 		
 
 func shoot():
-	const BEAM = preload("res://beam.tscn") 
+	const BEAM = preload("res://Weapon/beam.tscn") 
 	var new_beam = BEAM.instantiate()
 	new_beam.global_position = %shootingpoint.global_position
 	new_beam.global_rotation = %shootingpoint.global_rotation
