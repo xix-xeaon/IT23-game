@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d17amenv1h7gb"]
+
+[ext_resource type="Script" path="res://Weapon/beam.gd" id="1_ufp0o"]
+[ext_resource type="Texture2D" uid="uid://dk44bbyc8m1rs" path="res://Weapon/laserPurple.png" id="2_72qjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7ksk"]
+size = Vector2(45, 22)
+
+[node name="beam" type="Area2D"]
+top_level = true
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_ufp0o")
+
+[node name="Projectile" type="Sprite2D" parent="."]
+texture = ExtResource("2_72qjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_d7ksk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
