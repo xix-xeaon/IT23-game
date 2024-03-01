@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkhlcsjqt3ajj"]
+
+[ext_resource type="Texture2D" uid="uid://dlgqlt3riuxhm" path="res://boss/demon-Files/PNG/demon-idle.png" id="1_pjcdw"]
+
+[sub_resource type="GDScript" id="GDScript_iwou8"]
+script/source = "extends CharacterBody2D
+
+@export var speed = 300
+
+func _physics_process(delta):
+	var direction = global_position.direction_to(Global.player.global_position)
+	velocity = direction * speed 
+	move_and_slide()
+	
+	
+	
+		
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mulhs"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(0, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inbrt"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(160, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8tp6"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(320, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8igd"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(480, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20j3y"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(640, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya40t"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(800, 0, 160, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lmili"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mulhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inbrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8tp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8igd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20j3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya40t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_utcvn"]
+radius = 2.8194
+
+[node name="Demon_boss" type="CharacterBody2D"]
+position = Vector2(1, -94)
+scale = Vector2(16.6158, 16.6158)
+script = SubResource("GDScript_iwou8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4.22789, 6.96358)
+scale = Vector2(0.104925, 0.104925)
+sprite_frames = SubResource("SpriteFrames_lmili")
+animation = &"idle"
+frame_progress = 0.700614
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.52771, 7.70349)
+shape = SubResource("CircleShape2D_utcvn")
