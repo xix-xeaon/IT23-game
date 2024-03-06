@@ -6,12 +6,14 @@ const DAMAGE_RATE = 5.0
 
 var health = 100.0
 
+@export var speed = 350
+
 func _ready():
 	Global.player = self
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = direction * 600
+	velocity = direction * speed
 	move_and_slide()
 	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
