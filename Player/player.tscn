@@ -57,4 +57,4 @@ value = 100.0
 show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.75, 0.75)
