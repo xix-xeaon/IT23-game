@@ -16,6 +16,18 @@ func _physics_process(delta):
 	velocity = direction * speed
 	move_and_slide()
 	
+	if Input.is_action_pressed("move_left"):
+		%AnimatedSprite2D.flip_h = true
+		%AnimatedSprite2D.play("walk")
+	elif Input.is_action_pressed("move_right"):
+		%AnimatedSprite2D.flip_h = false
+		%AnimatedSprite2D.play("walk")
+	elif Input.is_action_pressed("move_down") or Input.is_action_pressed("move_up"):
+		%AnimatedSprite2D.play("walk")
+	else:
+		%AnimatedSprite2D.play("idle")
+		
+	
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta

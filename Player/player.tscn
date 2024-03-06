@@ -1,8 +1,64 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwibpj61yuhlv"]
+[gd_scene load_steps=17 format=3 uid="uid://cwibpj61yuhlv"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_62xea"]
-[ext_resource type="Texture2D" uid="uid://cw7qc4s44biy6" path="res://Player/character_robot_walk0.png" id="2_uka3s"]
-[ext_resource type="PackedScene" uid="uid://c3o6lnqfl6rwp" path="res://Weapon/raygun.tscn" id="3_e85u1"]
+[ext_resource type="Texture2D" uid="uid://bej62dkx5mlhl" path="res://Player/Sprites/Hit/character_robot_hit.png" id="3_5elhd"]
+[ext_resource type="Texture2D" uid="uid://cqu7otsqfcbkh" path="res://Player/Sprites/Idle/character_robot_idle.png" id="4_3qbxv"]
+[ext_resource type="Texture2D" uid="uid://bxul5tq8nsbup" path="res://Player/Sprites/Walking-Sprites/character_robot_walk0.png" id="5_fh6cf"]
+[ext_resource type="Texture2D" uid="uid://o0bdnkijkxex" path="res://Player/Sprites/Walking-Sprites/character_robot_walk1.png" id="6_ugtlc"]
+[ext_resource type="Texture2D" uid="uid://v0okmpb1kkhh" path="res://Player/Sprites/Walking-Sprites/character_robot_walk2.png" id="7_iwsgb"]
+[ext_resource type="Texture2D" uid="uid://djawdo5a4ipoq" path="res://Player/Sprites/Walking-Sprites/character_robot_walk3.png" id="8_5eqyp"]
+[ext_resource type="Texture2D" uid="uid://c6rp1vn35ajq8" path="res://Player/Sprites/Walking-Sprites/character_robot_walk4.png" id="9_vvsmv"]
+[ext_resource type="Texture2D" uid="uid://80go7inaumul" path="res://Player/Sprites/Walking-Sprites/character_robot_walk5.png" id="10_cw2oe"]
+[ext_resource type="Texture2D" uid="uid://b08y4t51pf8qw" path="res://Player/Sprites/Walking-Sprites/character_robot_walk6.png" id="11_dkc75"]
+[ext_resource type="Texture2D" uid="uid://dvtvd0tqe4hoa" path="res://Player/Sprites/Walking-Sprites/character_robot_walk7.png" id="12_mchnn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8oc4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5elhd")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3qbxv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fh6cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ugtlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iwsgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5eqyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vvsmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cw2oe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dkc75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mchnn")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_milye"]
 size = Vector2(48, 65)
@@ -28,9 +84,13 @@ corner_radius_bottom_left = 8
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_62xea")
 
-[node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.96875, 0.992188)
-texture = ExtResource("2_uka3s")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.485, 0.496)
+sprite_frames = SubResource("SpriteFrames_j8oc4")
+animation = &"walk"
+frame = 1
+frame_progress = 0.791665
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 12.5)
@@ -59,5 +119,3 @@ show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.75, 0.75)
-
-[node name="Raygun" parent="." instance=ExtResource("3_e85u1")]
