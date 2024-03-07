@@ -1,0 +1,107 @@
+[gd_scene load_steps=22 format=3 uid="uid://cvxioub202qqm"]
+
+[ext_resource type="Texture2D" uid="uid://b7yj4xkkha1xm" path="res://Trees/Assets/ground_shadow.png" id="1_0e7v3"]
+[ext_resource type="Texture2D" uid="uid://bsaapy4eapf14" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0000.png" id="2_4oq78"]
+[ext_resource type="Texture2D" uid="uid://b72ht21o4niah" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0001.png" id="3_6khav"]
+[ext_resource type="Texture2D" uid="uid://re4ovi2iks14" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0002.png" id="4_xccmx"]
+[ext_resource type="Texture2D" uid="uid://dydwmhu36ikjj" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0003.png" id="5_u6mwb"]
+[ext_resource type="Texture2D" uid="uid://bvy6ypwayhtvx" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0004.png" id="6_jtknb"]
+[ext_resource type="Texture2D" uid="uid://cbnuimqhmlfus" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0005.png" id="7_w3wvu"]
+[ext_resource type="Texture2D" uid="uid://cpgoonfaj25wx" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0006.png" id="8_wc66x"]
+[ext_resource type="Texture2D" uid="uid://405ew0wjl10l" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0007.png" id="9_rbgm6"]
+[ext_resource type="Texture2D" uid="uid://dwug4hmyethso" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0008.png" id="10_0s7ir"]
+[ext_resource type="Texture2D" uid="uid://dgo512yhqsedf" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0009.png" id="11_p72xm"]
+[ext_resource type="Texture2D" uid="uid://ccqp2gxwo356e" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0010.png" id="12_s3mi5"]
+[ext_resource type="Texture2D" uid="uid://bjwtidu7385sd" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0011.png" id="13_vytoy"]
+[ext_resource type="Texture2D" uid="uid://bun1106518ldn" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0012.png" id="14_a46of"]
+[ext_resource type="Texture2D" uid="uid://1tenoipwt3hi" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0013.png" id="15_ecudd"]
+[ext_resource type="Texture2D" uid="uid://bp31wscjgenen" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0014.png" id="16_qqrvj"]
+[ext_resource type="Texture2D" uid="uid://dmtwmqngh5isw" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0015.png" id="17_bcru6"]
+[ext_resource type="Texture2D" uid="uid://bwpmyv0rt1s5o" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0016.png" id="18_kidam"]
+[ext_resource type="Texture2D" uid="uid://qvrwvwuslole" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0017.png" id="19_l75y7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyxiq"]
+size = Vector2(29, 83)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rtb17"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4oq78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6khav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xccmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u6mwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jtknb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w3wvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wc66x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rbgm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0s7ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p72xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s3mi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vytoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_a46of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ecudd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qqrvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bcru6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kidam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l75y7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PineTree" type="StaticBody2D"]
+
+[node name="GroundShadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.141176)
+self_modulate = Color(0.0117647, 0.0117647, 0.0117647, 1)
+z_index = -1
+position = Vector2(0, 24)
+texture = ExtResource("1_0e7v3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_lyxiq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visibility_layer = 4
+position = Vector2(0, -100)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_rtb17")
+autoplay = "default"
+frame_progress = 0.877224
