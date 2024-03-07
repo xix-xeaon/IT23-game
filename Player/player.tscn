@@ -61,4 +61,3 @@ show_percentage = false
 zoom = Vector2(0.75, 0.75)
 
 [node name="Raygun" parent="." instance=ExtResource("3_y3bo1")]
-position = Vector2(13, 22)
