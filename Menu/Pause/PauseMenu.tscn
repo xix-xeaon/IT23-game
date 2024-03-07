@@ -25,7 +25,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.313726)
-metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 1
@@ -34,10 +33,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -335.5
+offset_top = -175.5
+offset_right = 335.5
+offset_bottom = 175.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -63,7 +62,6 @@ text = "Continue"
 metadata/_edit_use_anchors_ = true
 
 [node name="RestartButton" type="Button" parent="Control/VBoxContainer"]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -74,7 +72,6 @@ text = "Restart"
 metadata/_edit_use_anchors_ = true
 
 [node name="QuitButton" type="Button" parent="Control/VBoxContainer"]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
