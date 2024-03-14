@@ -20,9 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://bwpmyv0rt1s5o" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0016.png" id="18_kidam"]
 [ext_resource type="Texture2D" uid="uid://qvrwvwuslole" path="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0017.png" id="19_l75y7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyxiq"]
-size = Vector2(29, 83)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_rtb17"]
 animations = [{
 "frames": [{
@@ -85,23 +82,27 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w1xkx"]
+radius = 11.5
+height = 54.0
+
 [node name="PineTree" type="StaticBody2D"]
-
-[node name="GroundShadow" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.141176)
-self_modulate = Color(0.0117647, 0.0117647, 0.0117647, 1)
-z_index = -1
-position = Vector2(0, 24)
-texture = ExtResource("1_0e7v3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -0.5)
-shape = SubResource("RectangleShape2D_lyxiq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visibility_layer = 4
-position = Vector2(0, -100)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_rtb17")
 autoplay = "default"
 frame_progress = 0.877224
+
+[node name="GroundShadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.0784314)
+self_modulate = Color(0.0117647, 0.0117647, 0.0117647, 1)
+z_index = -1
+position = Vector2(0.499997, 142)
+scale = Vector2(1.36905, 1)
+texture = ExtResource("1_0e7v3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 123)
+shape = SubResource("CapsuleShape2D_w1xkx")
