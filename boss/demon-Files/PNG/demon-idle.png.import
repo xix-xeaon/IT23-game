@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlgqlt3riuxhm"
-path="res://.godot/imported/demon-idle.png-1e587d15b90954d1aecb37ef96f6b5b3.ctex"
+path="res://.godot/imported/demon-idle.png-7a5f23733354fc3472ab4dbf87cd83e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://boss/demon-Files/PNG/demon-idle.png"
-dest_files=["res://.godot/imported/demon-idle.png-1e587d15b90954d1aecb37ef96f6b5b3.ctex"]
+source_file="res://Boss/Demon-Files/PNG/demon-idle.png"
+dest_files=["res://.godot/imported/demon-idle.png-7a5f23733354fc3472ab4dbf87cd83e5.ctex"]
 
 [params]
 

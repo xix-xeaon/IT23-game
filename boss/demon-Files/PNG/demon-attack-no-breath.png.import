@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://st1hihoh16lf"
-path="res://.godot/imported/demon-attack-no-breath.png-1a0d8ddb905e639cf80fd7270d1c2f33.ctex"
+path="res://.godot/imported/demon-attack-no-breath.png-742f3494479a53ca87559a4d1f1281ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://boss/demon-Files/PNG/demon-attack-no-breath.png"
-dest_files=["res://.godot/imported/demon-attack-no-breath.png-1a0d8ddb905e639cf80fd7270d1c2f33.ctex"]
+source_file="res://Boss/Demon-Files/PNG/demon-attack-no-breath.png"
+dest_files=["res://.godot/imported/demon-attack-no-breath.png-742f3494479a53ca87559a4d1f1281ac.ctex"]
 
 [params]
 

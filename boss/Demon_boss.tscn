@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://bkhlcsjqt3ajj"]
 
-[ext_resource type="Script" path="res://boss/Demon_boss.gd" id="1_djsbf"]
-[ext_resource type="Texture2D" uid="uid://dlgqlt3riuxhm" path="res://boss/demon-Files/PNG/demon-idle.png" id="1_pjcdw"]
+[ext_resource type="Script" path="res://Boss/Demon_boss.gd" id="1_djsbf"]
+[ext_resource type="Texture2D" uid="uid://dlgqlt3riuxhm" path="res://Boss/Demon-Files/PNG/demon-idle.png" id="1_pjcdw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mulhs"]
 atlas = ExtResource("1_pjcdw")
@@ -100,7 +100,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"moving_l",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_utcvn"]
@@ -108,6 +108,9 @@ radius = 1.08498
 
 [node name="Demon_boss" type="CharacterBody2D"]
 scale = Vector2(28.0339, 28.0339)
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
 script = ExtResource("1_djsbf")
 
 [node name="AnimatedSprite_right" type="AnimatedSprite2D" parent="."]
