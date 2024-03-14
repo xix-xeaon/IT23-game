@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 func _ready():
-	%AnimatedSprite2D.play("idle")
+	%AnimatedSprite2D.play("walk")
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(Global.player.global_position)
