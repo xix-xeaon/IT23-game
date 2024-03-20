@@ -1,30 +1,29 @@
-[gd_scene load_steps=17 format=3 uid="uid://cwibpj61yuhlv"]
+[gd_scene load_steps=15 format=3 uid="uid://cwibpj61yuhlv"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_62xea"]
 [ext_resource type="Texture2D" uid="uid://bej62dkx5mlhl" path="res://Player/Sprites/Hit/character_robot_hit.png" id="3_5elhd"]
-[ext_resource type="Texture2D" uid="uid://cqu7otsqfcbkh" path="res://Player/Sprites/Idle/character_robot_idle.png" id="4_3qbxv"]
-[ext_resource type="Texture2D" uid="uid://bxul5tq8nsbup" path="res://Player/Sprites/Walking-Sprites/character_robot_walk0.png" id="5_fh6cf"]
-[ext_resource type="Texture2D" uid="uid://o0bdnkijkxex" path="res://Player/Sprites/Walking-Sprites/character_robot_walk1.png" id="6_ugtlc"]
-[ext_resource type="Texture2D" uid="uid://v0okmpb1kkhh" path="res://Player/Sprites/Walking-Sprites/character_robot_walk2.png" id="7_iwsgb"]
-[ext_resource type="Texture2D" uid="uid://djawdo5a4ipoq" path="res://Player/Sprites/Walking-Sprites/character_robot_walk3.png" id="8_5eqyp"]
-[ext_resource type="Texture2D" uid="uid://c6rp1vn35ajq8" path="res://Player/Sprites/Walking-Sprites/character_robot_walk4.png" id="9_vvsmv"]
-[ext_resource type="Texture2D" uid="uid://80go7inaumul" path="res://Player/Sprites/Walking-Sprites/character_robot_walk5.png" id="10_cw2oe"]
-[ext_resource type="Texture2D" uid="uid://b08y4t51pf8qw" path="res://Player/Sprites/Walking-Sprites/character_robot_walk6.png" id="11_dkc75"]
-[ext_resource type="Texture2D" uid="uid://dvtvd0tqe4hoa" path="res://Player/Sprites/Walking-Sprites/character_robot_walk7.png" id="12_mchnn"]
+[ext_resource type="Texture2D" uid="uid://bugssoeugxl3j" path="res://Player/Sprites/Hit/character_robot_hurt.png" id="3_v3xdp"]
+[ext_resource type="Texture2D" uid="uid://dyxbfsn68dyx2" path="res://Player/Sprites/Idle/character_robot_think.png" id="3_vy5jp"]
+[ext_resource type="Texture2D" uid="uid://b0rg2fgb6c6xg" path="res://Player/Sprites/Run/character_robot_run0.png" id="6_77qk0"]
+[ext_resource type="Texture2D" uid="uid://cds36qelx4scu" path="res://Player/Sprites/Run/character_robot_run1.png" id="7_gd3b6"]
+[ext_resource type="Texture2D" uid="uid://ccyvso5701igj" path="res://Player/Sprites/Run/character_robot_run2.png" id="8_j87v3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j8oc4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_5elhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v3xdp")
 }],
 "loop": true,
 "name": &"hit",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_3qbxv")
+"texture": ExtResource("3_vy5jp")
 }],
 "loop": true,
 "name": &"idle",
@@ -32,31 +31,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_fh6cf")
+"texture": ExtResource("6_77qk0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_ugtlc")
+"texture": ExtResource("7_gd3b6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_iwsgb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_5eqyp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_vvsmv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_cw2oe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_dkc75")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_mchnn")
+"texture": ExtResource("8_j87v3")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"run",
 "speed": 5.0
 }]
 
@@ -81,6 +65,14 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="Animation" id="Animation_ot2kb"]
+resource_name = "blink"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fvbht"]
+_data = {
+"blink": SubResource("Animation_ot2kb")
+}
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_62xea")
 
@@ -88,9 +80,8 @@ script = ExtResource("1_62xea")
 unique_name_in_owner = true
 scale = Vector2(0.485, 0.496)
 sprite_frames = SubResource("SpriteFrames_j8oc4")
-animation = &"walk"
-frame = 1
-frame_progress = 0.791665
+animation = &"hit"
+frame_progress = 0.809925
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 12.5)
@@ -119,3 +110,10 @@ show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.75, 0.75)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fvbht")
+}
+
+[connection signal="health_decrease" from="." to="." method="_on_health_decrease"]
