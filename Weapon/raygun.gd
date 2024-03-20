@@ -21,7 +21,7 @@ func shoot():
 		new_beam.global_position = %shootingpoint.global_position
 		new_beam.global_rotation = %shootingpoint.global_rotation
 		%shootingpoint.add_child(new_beam)
-
+		%WeaponSound.play()
 
 func _on_timer_timeout():
 	shoot()

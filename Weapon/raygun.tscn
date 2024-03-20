@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3o6lnqfl6rwp"]
+[gd_scene load_steps=5 format=3 uid="uid://c3o6lnqfl6rwp"]
 
 [ext_resource type="Script" path="res://Weapon/raygun.gd" id="1_a24gm"]
 [ext_resource type="Texture2D" uid="uid://yfdku5g0hnxr" path="res://Weapon/raygunPurpleBig.png" id="1_mg3in"]
+[ext_resource type="AudioStream" path="res://Sounds/Music/laser_shooting_sfx.wav" id="3_rpro2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_32q26"]
 radius = 792.841
@@ -30,5 +31,10 @@ position = Vector2(16.7847, -0.654204)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
+
+[node name="WeaponSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_rpro2")
+volume_db = -10.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
