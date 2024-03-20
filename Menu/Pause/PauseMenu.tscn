@@ -1,0 +1,96 @@
+[gd_scene load_steps=4 format=3 uid="uid://di2fmjt83fttl"]
+
+[ext_resource type="Script" path="res://Menu/Pause/PauseMenu.gd" id="1_x0ais"]
+[ext_resource type="AudioStream" uid="uid://ba435ky5b5vn3" path="res://Sounds/UI/Pause.ogg" id="4_hsgm8"]
+[ext_resource type="AudioStream" uid="uid://ygbl2sj5o5va" path="res://Sounds/UI/Unpause.ogg" id="5_j84fc"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+visible = false
+script = ExtResource("1_x0ais")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.313726)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.5
+offset_top = -175.5
+offset_right = 335.5
+offset_bottom = 175.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 96
+text = "GAME PAUSED"
+metadata/_edit_use_anchors_ = true
+
+[node name="ContinueButton" type="Button" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../RestartButton")
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+metadata/_edit_use_anchors_ = true
+
+[node name="RestartButton" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../ContinueButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
+theme_override_font_sizes/font_size = 32
+text = "Restart"
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitButton" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../RestartButton")
+focus_neighbor_bottom = NodePath("../ContinueButton")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Pause" type="AudioStreamPlayer" parent="Control"]
+unique_name_in_owner = true
+stream = ExtResource("4_hsgm8")
+volume_db = -4.0
+
+[node name="Unpause" type="AudioStreamPlayer" parent="Control"]
+unique_name_in_owner = true
+stream = ExtResource("5_j84fc")
+volume_db = -4.0
+
+[connection signal="pressed" from="Control/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

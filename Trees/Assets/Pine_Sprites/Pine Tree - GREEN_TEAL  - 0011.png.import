@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6olnvg3y2rq"
-path="res://.godot/imported/foliagePack_005.png-6cda26e6998b018b837dcb11af1a1b46.ctex"
+uid="uid://bjwtidu7385sd"
+path="res://.godot/imported/Pine Tree - GREEN_TEAL  - 0011.png-75104f7061b0cc178e721c8817470493.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Trees/foliagePack_005.png"
-dest_files=["res://.godot/imported/foliagePack_005.png-6cda26e6998b018b837dcb11af1a1b46.ctex"]
+source_file="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0011.png"
+dest_files=["res://.godot/imported/Pine Tree - GREEN_TEAL  - 0011.png-75104f7061b0cc178e721c8817470493.ctex"]
 
 [params]
 
