@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7yj4xkkha1xm"
-path="res://.godot/imported/ground_shadow.png-22d594043efe0603ca9edb0a3f3fbbf4.ctex"
+uid="uid://dk44bbyc8m1rs"
+path="res://.godot/imported/laserPurple.png-1d3e0066db93327be5968d97b0650820.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Trees/ground_shadow.png"
-dest_files=["res://.godot/imported/ground_shadow.png-22d594043efe0603ca9edb0a3f3fbbf4.ctex"]
+source_file="res://Weapon/laserPurple.png"
+dest_files=["res://.godot/imported/laserPurple.png-1d3e0066db93327be5968d97b0650820.ctex"]
 
 [params]
 

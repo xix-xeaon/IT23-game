@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwibpj61yuhlv"]
+[gd_scene load_steps=8 format=3 uid="uid://cwibpj61yuhlv"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_62xea"]
 [ext_resource type="Texture2D" uid="uid://cw7qc4s44biy6" path="res://Player/character_robot_walk0.png" id="2_uka3s"]
+[ext_resource type="PackedScene" uid="uid://c3o6lnqfl6rwp" path="res://Weapon/raygun.tscn" id="3_e85u1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_milye"]
 size = Vector2(48, 65)
@@ -58,3 +59,5 @@ show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.75, 0.75)
+
+[node name="Raygun" parent="." instance=ExtResource("3_e85u1")]
