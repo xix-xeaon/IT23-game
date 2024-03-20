@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd8ge4qdk7xgr"]
+[gd_scene load_steps=10 format=3 uid="uid://bd8ge4qdk7xgr"]
 
 [ext_resource type="Script" path="res://Spider (mob)/spider.gd" id="1_kg4sr"]
 [ext_resource type="Texture2D" uid="uid://clfqe13uxmkbr" path="res://Spider (mob)/spider.png" id="2_vtiax"]
@@ -49,6 +49,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnnxb"]
 size = Vector2(70, 44)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56u6t"]
+size = Vector2(66, 41)
+
 [node name="Spider" type="CharacterBody2D"]
 script = ExtResource("1_kg4sr")
 
@@ -58,3 +61,10 @@ animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lnnxb")
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_56u6t")
+debug_color = Color(0.968627, 0.180392, 0, 0.419608)

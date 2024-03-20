@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bt73c2vl354v4"]
+[gd_scene load_steps=9 format=3 uid="uid://bt73c2vl354v4"]
 
 [ext_resource type="Script" path="res://Ghost/ghost.gd" id="1_mjj3b"]
 [ext_resource type="Texture2D" uid="uid://cvnbyywnm0fle" path="res://Ghost/Ghost-animation/ghost.png" id="2_dauuc"]
@@ -45,6 +45,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv4ub"]
 size = Vector2(50, 75)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ylsm5"]
+radius = 24.0
+height = 74.0
+
 [node name="Ghost" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
@@ -58,3 +62,9 @@ frame_progress = 0.145587
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uv4ub")
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CapsuleShape2D_ylsm5")
+debug_color = Color(0.976471, 0.14902, 0, 0.419608)
