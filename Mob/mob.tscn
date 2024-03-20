@@ -3,7 +3,9 @@
 [ext_resource type="Script" path="res://Mob/mob.gd" id="1_35va2"]
 [ext_resource type="Texture2D" uid="uid://bs1oudwx7fsav" path="res://Mob/barnacle.png" id="2_ql1rq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wpfrm"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cjoe2"]
+radius = 18.0
+height = 54.0
 
 [node name="Mob" type="CharacterBody2D"]
 collision_layer = 2
@@ -15,4 +17,5 @@ script = ExtResource("1_35va2")
 texture = ExtResource("2_ql1rq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_wpfrm")
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_cjoe2")
