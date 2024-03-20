@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7yj4xkkha1xm"
-path="res://.godot/imported/ground_shadow.png-22d594043efe0603ca9edb0a3f3fbbf4.ctex"
+uid="uid://bjwtidu7385sd"
+path="res://.godot/imported/Pine Tree - GREEN_TEAL  - 0011.png-75104f7061b0cc178e721c8817470493.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Trees/ground_shadow.png"
-dest_files=["res://.godot/imported/ground_shadow.png-22d594043efe0603ca9edb0a3f3fbbf4.ctex"]
+source_file="res://Trees/Assets/Pine_Sprites/Pine Tree - GREEN_TEAL  - 0011.png"
+dest_files=["res://.godot/imported/Pine Tree - GREEN_TEAL  - 0011.png-75104f7061b0cc178e721c8817470493.ctex"]
 
 [params]
 
