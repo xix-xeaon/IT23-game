@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxahbekv54qck"
-path="res://.godot/imported/ghost_normal.png-1426422291c186fd322b57e685551c92.ctex"
+uid="uid://bs1oudwx7fsav"
+path="res://.godot/imported/barnacle.png-fe82fa928e4a90763f8527097e81aaf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost/Ghost-animation/ghost_normal.png"
-dest_files=["res://.godot/imported/ghost_normal.png-1426422291c186fd322b57e685551c92.ctex"]
+source_file="res://Mobs/Barnacle/barnacle.png"
+dest_files=["res://.godot/imported/barnacle.png-fe82fa928e4a90763f8527097e81aaf8.ctex"]
 
 [params]
 

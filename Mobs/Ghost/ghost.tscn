@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bt73c2vl354v4"]
 
-[ext_resource type="Script" path="res://Ghost/ghost.gd" id="1_mjj3b"]
-[ext_resource type="Texture2D" uid="uid://cvnbyywnm0fle" path="res://Ghost/Ghost-animation/ghost.png" id="2_dauuc"]
-[ext_resource type="Texture2D" uid="uid://dppegwfesdum8" path="res://Ghost/Ghost-animation/ghost_dead.png" id="3_0ofjp"]
-[ext_resource type="Texture2D" uid="uid://c7pyrdx5mgqo8" path="res://Ghost/Ghost-animation/ghost_hit.png" id="4_281ai"]
-[ext_resource type="Texture2D" uid="uid://cxahbekv54qck" path="res://Ghost/Ghost-animation/ghost_normal.png" id="5_ewo6b"]
+[ext_resource type="Script" path="res://Mobs/Ghost/ghost.gd" id="1_mjj3b"]
+[ext_resource type="Texture2D" uid="uid://cvnbyywnm0fle" path="res://Mobs/Ghost/Ghost-animation/ghost.png" id="2_dauuc"]
+[ext_resource type="Texture2D" uid="uid://dppegwfesdum8" path="res://Mobs/Ghost/Ghost-animation/ghost_dead.png" id="3_0ofjp"]
+[ext_resource type="Texture2D" uid="uid://c7pyrdx5mgqo8" path="res://Mobs/Ghost/Ghost-animation/ghost_hit.png" id="4_281ai"]
+[ext_resource type="Texture2D" uid="uid://cxahbekv54qck" path="res://Mobs/Ghost/Ghost-animation/ghost_normal.png" id="5_ewo6b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c0klk"]
 animations = [{

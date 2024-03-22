@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dppegwfesdum8"
-path="res://.godot/imported/ghost_dead.png-8303cb1a568c1d91d083a8647da6b30c.ctex"
+path="res://.godot/imported/ghost_dead.png-cd3d42d2629bb94f1a1992fc92816df9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost/Ghost-animation/ghost_dead.png"
-dest_files=["res://.godot/imported/ghost_dead.png-8303cb1a568c1d91d083a8647da6b30c.ctex"]
+source_file="res://Mobs/Ghost/Ghost-animation/ghost_dead.png"
+dest_files=["res://.godot/imported/ghost_dead.png-cd3d42d2629bb94f1a1992fc92816df9.ctex"]
 
 [params]
 
