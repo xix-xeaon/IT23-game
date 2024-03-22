@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4l5h8g4hdino"
-path="res://.godot/imported/spider_walk2.png-a159dcb75aa706f9b2080d72ba387fe8.ctex"
+uid="uid://cvnbyywnm0fle"
+path="res://.godot/imported/ghost.png-9fd000f032a7291ad1b1d3999b1d602f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spider (mob)/spider_walk2.png"
-dest_files=["res://.godot/imported/spider_walk2.png-a159dcb75aa706f9b2080d72ba387fe8.ctex"]
+source_file="res://Mobs/Ghost/Ghost-animation/ghost.png"
+dest_files=["res://.godot/imported/ghost.png-9fd000f032a7291ad1b1d3999b1d602f.ctex"]
 
 [params]
 

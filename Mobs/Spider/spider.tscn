@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://bd8ge4qdk7xgr"]
 
-[ext_resource type="Script" path="res://Spider (mob)/spider.gd" id="1_kg4sr"]
-[ext_resource type="Texture2D" uid="uid://clfqe13uxmkbr" path="res://Spider (mob)/spider.png" id="2_vtiax"]
-[ext_resource type="Texture2D" uid="uid://c1nnsr0rvidkh" path="res://Spider (mob)/spider_dead.png" id="3_8hn7w"]
-[ext_resource type="Texture2D" uid="uid://psueefrbxqco" path="res://Spider (mob)/spider_hit.png" id="4_ikte1"]
-[ext_resource type="Texture2D" uid="uid://4ahgxxasvkra" path="res://Spider (mob)/spider_walk1.png" id="5_7360m"]
-[ext_resource type="Texture2D" uid="uid://c4l5h8g4hdino" path="res://Spider (mob)/spider_walk2.png" id="6_kp1um"]
+[ext_resource type="Script" path="res://Mobs/Spider/spider.gd" id="1_kg4sr"]
+[ext_resource type="Texture2D" uid="uid://clfqe13uxmkbr" path="res://Mobs/Spider/spider.png" id="2_vtiax"]
+[ext_resource type="Texture2D" uid="uid://c1nnsr0rvidkh" path="res://Mobs/Spider/spider_dead.png" id="3_8hn7w"]
+[ext_resource type="Texture2D" uid="uid://psueefrbxqco" path="res://Mobs/Spider/spider_hit.png" id="4_ikte1"]
+[ext_resource type="Texture2D" uid="uid://4ahgxxasvkra" path="res://Mobs/Spider/spider_walk1.png" id="5_7360m"]
+[ext_resource type="Texture2D" uid="uid://c4l5h8g4hdino" path="res://Mobs/Spider/spider_walk2.png" id="6_kp1um"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i885l"]
 animations = [{

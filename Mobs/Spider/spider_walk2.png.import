@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://psueefrbxqco"
-path="res://.godot/imported/spider_hit.png-d232f9f2a6c2e0c4c62df0587b5e07b0.ctex"
+uid="uid://c4l5h8g4hdino"
+path="res://.godot/imported/spider_walk2.png-0e3a2bf90d768d3465d42a687f55d659.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spider (mob)/spider_hit.png"
-dest_files=["res://.godot/imported/spider_hit.png-d232f9f2a6c2e0c4c62df0587b5e07b0.ctex"]
+source_file="res://Mobs/Spider/spider_walk2.png"
+dest_files=["res://.godot/imported/spider_walk2.png-0e3a2bf90d768d3465d42a687f55d659.ctex"]
 
 [params]
 
