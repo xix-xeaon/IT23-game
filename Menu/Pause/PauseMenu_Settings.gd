@@ -4,8 +4,7 @@ signal settings_back_button
 
 func update_sound_label() -> void:
 	# Update sound label with current value on the slider
-	if %VolumeSlider.value >= 0:
-		%SoundLabel.text = "Sound (" + str(%VolumeSlider.value * 100) + "%)"
+	%SoundLabel.text = "Sound (" + str(%VolumeSlider.value * 100) + "%)"
 
 func _ready() -> void:
 	update_sound_label()
