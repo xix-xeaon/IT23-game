@@ -50,7 +50,11 @@ animations = [{
 size = Vector2(70, 44)
 
 [node name="Spider" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
 script = ExtResource("1_kg4sr")
+speed = 300
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i885l")
