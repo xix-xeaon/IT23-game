@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctuplp7iua3o2"]
+[gd_scene load_steps=7 format=3 uid="uid://ctuplp7iua3o2"]
 
 [ext_resource type="Script" path="res://Menu/Main/main-menu.gd" id="1_jc1kk"]
 [ext_resource type="AudioStream" uid="uid://cn3hu5nkunvnb" path="res://Sounds/Music/MainMenuMusic.ogg" id="2_ndsvf"]
 [ext_resource type="AudioStream" uid="uid://d3rvslhftnyv2" path="res://Sounds/UI/MenuSelect.ogg" id="3_eupcb"]
+[ext_resource type="Texture2D" uid="uid://bnuls8i655sci" path="res://NTI_Logo.png" id="4_tde5x"]
 
-[sub_resource type="Gradient" id="Gradient_i3wht"]
+[sub_resource type="Gradient" id="Gradient_6yt7d"]
 colors = PackedColorArray(0.176471, 0, 0, 1, 1, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_keutq"]
-gradient = SubResource("Gradient_i3wht")
+gradient = SubResource("Gradient_6yt7d")
 fill_from = Vector2(0.504587, 1)
 fill_to = Vector2(0.5, 0)
 metadata/_snap_enabled = true
@@ -31,19 +32,39 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_keutq")
 
-[node name="Title" type="Label" parent="."]
+[node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -364.0
-offset_top = -204.0
-offset_right = 364.0
-offset_bottom = -116.0
+offset_left = -551.0
+offset_top = -299.0
+offset_right = -410.0
+offset_bottom = -175.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("4_tde5x")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TitleContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.5
+offset_top = -248.5
+offset_right = 267.5
+offset_bottom = -111.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="TitleContainer"]
+layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_outline_size = 6
@@ -52,42 +73,44 @@ text = "Vampire Survivor"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CreatedBy" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -173.0
-offset_top = -124.0
-offset_right = 173.0
-offset_bottom = -79.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CreatedBy" type="Label" parent="TitleContainer"]
+layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_outline_size = 5
 theme_override_font_sizes/font_size = 32
-text = "Created By IT23 NTI Malmö"
+text = "Created by IT21 NTI Malmö"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StartButton" type="Button" parent="."]
+[node name="ButtonsContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -156.0
-offset_top = -26.5
-offset_right = 156.0
-offset_bottom = 26.5
+offset_left = -196.0
+offset_top = -63.0
+offset_right = 196.0
+offset_bottom = 229.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="StartButton" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
 text = "Start Game"
+
+[node name="SettingsButton" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Settings"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ndsvf")
@@ -98,4 +121,5 @@ autoplay = true
 unique_name_in_owner = true
 stream = ExtResource("3_eupcb")
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonsContainer/StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonsContainer/SettingsButton" to="." method="_on_settings_button_pressed"]

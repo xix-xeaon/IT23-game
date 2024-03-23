@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfc0bwoafcbso"]
+
+[ext_resource type="Script" path="res://Menu/Settings/Settings.gd" id="1_3iljn"]
+[ext_resource type="AudioStream" uid="uid://d3rvslhftnyv2" path="res://Sounds/UI/MenuSelect.ogg" id="2_40sig"]
+[ext_resource type="PackedScene" uid="uid://c5xis70gkmfv0" path="res://Menu/Settings/Volume_Slider.tscn" id="2_g77u8"]
+
+[sub_resource type="Gradient" id="Gradient_i3wht"]
+colors = PackedColorArray(0.176471, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8sruk"]
+gradient = SubResource("Gradient_i3wht")
+fill_from = Vector2(0.504587, 1)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3iljn")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_8sruk")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -364.0
+offset_top = -274.0
+offset_right = 364.0
+offset_bottom = -186.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 64
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -526.0
+offset_top = -182.0
+offset_right = -108.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="SoundSettings" type="VBoxContainer" parent="SettingsContainer"]
+layout_mode = 2
+
+[node name="SoundLabel" type="Label" parent="SettingsContainer/SoundSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 48
+text = "Sound (100)"
+
+[node name="VolumeSlider" parent="SettingsContainer/SoundSettings" instance=ExtResource("2_g77u8")]
+unique_name_in_owner = true
+layout_mode = 2
+value = 1.0
+bus_name = "Master"
+
+[node name="BackButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -526.0
+offset_top = 226.0
+offset_right = -326.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="MenuSelect" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_40sig")
+
+[connection signal="value_changed" from="SettingsContainer/SoundSettings/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
