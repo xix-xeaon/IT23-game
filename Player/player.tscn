@@ -1,8 +1,48 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwibpj61yuhlv"]
+[gd_scene load_steps=15 format=3 uid="uid://cwibpj61yuhlv"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_62xea"]
-[ext_resource type="Texture2D" uid="uid://cw7qc4s44biy6" path="res://Player/character_robot_walk0.png" id="2_uka3s"]
-[ext_resource type="PackedScene" uid="uid://c3o6lnqfl6rwp" path="res://Weapon/raygun.tscn" id="3_e85u1"]
+[ext_resource type="Texture2D" uid="uid://bej62dkx5mlhl" path="res://Player/Sprites/Hit/character_robot_hit.png" id="3_5elhd"]
+[ext_resource type="Texture2D" uid="uid://bugssoeugxl3j" path="res://Player/Sprites/Hit/character_robot_hurt.png" id="3_v3xdp"]
+[ext_resource type="Texture2D" uid="uid://dyxbfsn68dyx2" path="res://Player/Sprites/Idle/character_robot_think.png" id="3_vy5jp"]
+[ext_resource type="Texture2D" uid="uid://b0rg2fgb6c6xg" path="res://Player/Sprites/Run/character_robot_run0.png" id="6_77qk0"]
+[ext_resource type="Texture2D" uid="uid://cds36qelx4scu" path="res://Player/Sprites/Run/character_robot_run1.png" id="7_gd3b6"]
+[ext_resource type="Texture2D" uid="uid://ccyvso5701igj" path="res://Player/Sprites/Run/character_robot_run2.png" id="8_j87v3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8oc4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5elhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v3xdp")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vy5jp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_77qk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gd3b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j87v3")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_milye"]
 size = Vector2(48, 65)
@@ -25,12 +65,23 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="Animation" id="Animation_ot2kb"]
+resource_name = "blink"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fvbht"]
+_data = {
+"blink": SubResource("Animation_ot2kb")
+}
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_62xea")
 
-[node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.96875, 0.992188)
-texture = ExtResource("2_uka3s")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.485, 0.496)
+sprite_frames = SubResource("SpriteFrames_j8oc4")
+animation = &"hit"
+frame_progress = 0.809925
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 12.5)
@@ -60,4 +111,9 @@ show_percentage = false
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.75, 0.75)
 
-[node name="Raygun" parent="." instance=ExtResource("3_e85u1")]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fvbht")
+}
+
+[connection signal="health_decrease" from="." to="." method="_on_health_decrease"]
