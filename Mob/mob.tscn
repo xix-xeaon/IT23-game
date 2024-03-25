@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqmm7g8iokudr"]
+[gd_scene load_steps=5 format=3 uid="uid://cqmm7g8iokudr"]
 
 [ext_resource type="Script" path="res://Mob/mob.gd" id="1_35va2"]
 [ext_resource type="Texture2D" uid="uid://bs1oudwx7fsav" path="res://Mob/barnacle.png" id="2_ql1rq"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cjoe2"]
-radius = 18.0
-height = 54.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_wpfrm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7hps5"]
+radius = 19.0
+height = 58.0
 
 [node name="Mob" type="CharacterBody2D"]
 collision_layer = 2
@@ -14,8 +16,14 @@ motion_mode = 1
 script = ExtResource("1_35va2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 texture = ExtResource("2_ql1rq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_cjoe2")
+shape = SubResource("CircleShape2D_wpfrm")
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CapsuleShape2D_7hps5")
+debug_color = Color(1, 0.0313726, 0.027451, 0.419608)
