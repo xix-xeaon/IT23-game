@@ -38,8 +38,8 @@ animations = [{
 "texture": ExtResource("2_dauuc")
 }],
 "loop": true,
-"name": &"idle",
-"speed": 5.0
+"name": &"walk",
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv4ub"]
@@ -52,9 +52,9 @@ motion_mode = 1
 script = ExtResource("1_mjj3b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_c0klk")
-animation = &"hit"
-frame_progress = 0.145587
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uv4ub")
