@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqmm7g8iokudr"]
 
-[ext_resource type="Script" path="res://Mob/mob.gd" id="1_35va2"]
-[ext_resource type="Texture2D" uid="uid://bs1oudwx7fsav" path="res://Mob/barnacle.png" id="2_ql1rq"]
+[ext_resource type="Script" path="res://Mobs/Barnacle/mob.gd" id="1_35va2"]
+[ext_resource type="Texture2D" uid="uid://bs1oudwx7fsav" path="res://Mobs/Barnacle/barnacle.png" id="2_ql1rq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cjoe2"]
 radius = 18.0
