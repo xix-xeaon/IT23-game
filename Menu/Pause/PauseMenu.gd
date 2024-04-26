@@ -25,9 +25,21 @@ func unpause_game() -> void:
 func _on_continue_button_pressed() -> void:
 	unpause_game()
 
+
 func _on_restart_button_pressed() -> void:
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+
+
+func _on_settings_button_pressed() -> void:
+	%Control.hide() # Hide buttons and show settings
+	%Settings.show()
+	%Settings_BackBtn.grab_focus()
+
+func _on_settings_back_button() -> void:
+	%Control.show() # Hide settings and show buttons
+	%Settings.hide()
+	%SettingsButton.grab_focus()
 
 
 func _on_quit_button_pressed() -> void:

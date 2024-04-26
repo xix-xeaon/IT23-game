@@ -1,30 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://di2fmjt83fttl"]
+[gd_scene load_steps=7 format=3 uid="uid://di2fmjt83fttl"]
 
 [ext_resource type="Script" path="res://Menu/Pause/PauseMenu.gd" id="1_x0ais"]
+[ext_resource type="PackedScene" uid="uid://c5xis70gkmfv0" path="res://Menu/Settings/Volume_Slider.tscn" id="2_cefij"]
+[ext_resource type="Script" path="res://Menu/Pause/PauseMenu_Settings.gd" id="2_x1w2w"]
 [ext_resource type="AudioStream" uid="uid://ba435ky5b5vn3" path="res://Sounds/UI/Pause.ogg" id="4_hsgm8"]
 [ext_resource type="AudioStream" uid="uid://ygbl2sj5o5va" path="res://Sounds/UI/Unpause.ogg" id="5_j84fc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1kkd"]
+bg_color = Color(0.137255, 0.137255, 0.137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
 visible = false
 script = ExtResource("1_x0ais")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Background" type="ColorRect" parent="Control"]
-layout_mode = 1
+[node name="Background" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.313726)
+
+[node name="Control" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 1
@@ -33,10 +42,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -335.5
-offset_top = -175.5
-offset_right = 335.5
-offset_bottom = 175.5
+offset_left = -335.0
+offset_top = -175.0
+offset_right = 336.0
+offset_bottom = 249.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -48,6 +57,8 @@ theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/font_size = 96
 text = "GAME PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ContinueButton" type="Button" parent="Control/VBoxContainer"]
@@ -66,31 +77,131 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../ContinueButton")
-focus_neighbor_bottom = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../SettingsButton")
 theme_override_font_sizes/font_size = 32
 text = "Restart"
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsButton" type="Button" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../RestartButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
+theme_override_font_sizes/font_size = 32
+text = "Settings"
 metadata/_edit_use_anchors_ = true
 
 [node name="QuitButton" type="Button" parent="Control/VBoxContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-focus_neighbor_top = NodePath("../RestartButton")
+focus_neighbor_top = NodePath("../SettingsButton")
 focus_neighbor_bottom = NodePath("../ContinueButton")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 metadata/_edit_use_anchors_ = true
 
-[node name="Pause" type="AudioStreamPlayer" parent="Control"]
+[node name="Settings" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_x1w2w")
+
+[node name="Panel" type="Panel" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -377.0
+offset_top = -237.0
+offset_right = 378.0
+offset_bottom = 237.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o1kkd")
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Settings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 96
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="VBoxContainer" parent="Settings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SoundSettings" type="VBoxContainer" parent="Settings/Panel/MarginContainer/VBoxContainer/Settings"]
+layout_mode = 2
+
+[node name="SoundLabel" type="Label" parent="Settings/Panel/MarginContainer/VBoxContainer/Settings/SoundSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 48
+text = "Sound (100)"
+
+[node name="VolumeSlider" parent="Settings/Panel/MarginContainer/VBoxContainer/Settings/SoundSettings" instance=ExtResource("2_cefij")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+value = 1.0
+bus_name = "Master"
+
+[node name="Settings_BackBtn" type="Button" parent="Settings/Panel/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="Pause" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_hsgm8")
 volume_db = -4.0
 
-[node name="Unpause" type="AudioStreamPlayer" parent="Control"]
+[node name="Unpause" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_j84fc")
 volume_db = -4.0
 
 [connection signal="pressed" from="Control/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="settings_back_button" from="Settings" to="." method="_on_settings_back_button"]
+[connection signal="value_changed" from="Settings/Panel/MarginContainer/VBoxContainer/Settings/SoundSettings/VolumeSlider" to="Settings" method="_on_volume_slider_value_changed"]
+[connection signal="pressed" from="Settings/Panel/MarginContainer/Settings_BackBtn" to="Settings" method="_on_back_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1nnsr0rvidkh"
-path="res://.godot/imported/spider_dead.png-a618c02ec4249134b7df77ad90018fe3.ctex"
+uid="uid://bnuls8i655sci"
+path="res://.godot/imported/NTI_Logo.png-db33fb0cea3c93c9923b1a94dcac1469.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spider (mob)/spider_dead.png"
-dest_files=["res://.godot/imported/spider_dead.png-a618c02ec4249134b7df77ad90018fe3.ctex"]
+source_file="res://NTI_Logo.png"
+dest_files=["res://.godot/imported/NTI_Logo.png-db33fb0cea3c93c9923b1a94dcac1469.ctex"]
 
 [params]
 
