@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://kx0v4xrk6n6f"]
+[gd_scene load_steps=3 format=3 uid="uid://kx0v4xrk6n6f"]
 
 [ext_resource type="Script" path="res://GameOver/GameOverScript.gd" id="1_fltc6"]
+[ext_resource type="AudioStream" uid="uid://b6mmpqy4wk323" path="res://Sounds/Music/GameOver.ogg" id="2_2q257"]
 
 [node name="GameOver" type="CanvasLayer"]
 process_mode = 3
@@ -65,6 +66,12 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 metadata/_edit_use_anchors_ = true
+
+[node name="GameoverSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_2q257")
+volume_db = 5.0
+stream_paused = true
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
