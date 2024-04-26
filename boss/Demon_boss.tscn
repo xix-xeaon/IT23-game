@@ -1,0 +1,131 @@
+[gd_scene load_steps=18 format=3 uid="uid://bkhlcsjqt3ajj"]
+
+[ext_resource type="Script" path="res://Boss/Demon_boss.gd" id="1_djsbf"]
+[ext_resource type="Texture2D" uid="uid://dlgqlt3riuxhm" path="res://Boss/Demon-Files/PNG/demon-idle.png" id="1_pjcdw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mulhs"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(0, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inbrt"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(160, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8tp6"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(320, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8igd"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(480, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20j3y"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(640, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya40t"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(800, 0, 160, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lmili"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mulhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inbrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8tp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8igd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20j3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya40t")
+}],
+"loop": true,
+"name": &"moving_r",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbj8p"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(0, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7s3y"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(160, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xekkk"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(320, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok7sh"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(480, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f670y"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(640, 0, 160, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj0nc"]
+atlas = ExtResource("1_pjcdw")
+region = Rect2(800, 0, 160, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwqt4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbj8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7s3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xekkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok7sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f670y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj0nc")
+}],
+"loop": true,
+"name": &"moving_l",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_utcvn"]
+radius = 1.08498
+
+[node name="Demon_boss" type="CharacterBody2D"]
+scale = Vector2(28.0339, 28.0339)
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_djsbf")
+
+[node name="AnimatedSprite_right" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.7, -0.749)
+scale = Vector2(0.0473506, 0.0473506)
+sprite_frames = SubResource("SpriteFrames_lmili")
+animation = &"moving_r"
+flip_h = true
+
+[node name="AnimatedSprite_left" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0.713421, -0.749092)
+scale = Vector2(0.0473506, 0.0473506)
+sprite_frames = SubResource("SpriteFrames_iwqt4")
+animation = &"moving_l"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_utcvn")
